@@ -14,4 +14,8 @@
     position: relative;
     top:3px
 }
-
+.navbar_div{
+    border-right: 2px solid;
+    padding-right: 10px;
+    margin: 0 3px;
+}

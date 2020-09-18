@@ -1,37 +1,35 @@
-import React from 'react';
-import { connect } from 'react-redux'
-import './Aside.css'
-//import { useDispatch } from 'react-redux';
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import "./Aside.css";
+
+const selectedStyle = {
+  color: "blue",
+};
 
 const Aside = (props) => {
-    // const dispatch = useDispatch();
+  const dispatch = useDispatch();
+  const changeCategory = (type) => () => {
+    dispatch({ type });
+  };
 
-    // const itemHandler = () => {
-    //     return props.getItems;
-    // }
+  const isSelect = useSelector((state) => state.isSelect);
 
-    return (
-        <div className='Aside'>
-            <p onClick={props.personalityItem} className='first_paragraph' >Personality</p> 
-            <p onClick={props.workItem}  className='second_paragraph' >Work</p>
-            <p onClick={props.familyItem} className='third_paragraph' >Family</p>
+  return (
+    <div className="Aside">
+      <p style={isSelect === "persons" ? selectedStyle : {}} onClick={changeCategory("PERSONS")}>
+        Persons
+      </p>
+      <p style={isSelect === "personality" ? selectedStyle : {}} onClick={changeCategory("PERSONALITY")}>
+        Personality
+      </p>
+      <p style={isSelect === "work" ? selectedStyle : {}} onClick={changeCategory("WORK")}>
+        Work
+      </p>
+      <p style={isSelect === "family" ? selectedStyle : {}} onClick={changeCategory("FAMILY")}>
+        Family
+      </p>
+    </div>
+  );
+};
 
-        </div>
-    );
-}
-
-// let mapStateToProps = (state) => {
-//     return {
-//         person: state
-//     };
-// }
-
-let mapDispatchToProps = (dispatch) => {
-    return {
-        personalityItem: () => dispatch({ type: 'PERSONALITY'}),
-        workItem: () => dispatch({ type: 'WORK' }),
-        familyItem: () => dispatch({ type: 'FAMILY' })
-    }
-}
-
-export default connect(null ,mapDispatchToProps)(Aside);
+export default Aside;

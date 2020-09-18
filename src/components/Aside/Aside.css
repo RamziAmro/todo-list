@@ -11,8 +11,9 @@
 .Aside p{
     margin-left: 10px;
     margin-bottom: 100px;
-    font-size: 22px;
+    font-size: 24px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 /* .first_paragraph{
