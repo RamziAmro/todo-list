@@ -1,0 +1,17 @@
+.Item {
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;
+    box-sizing: border-box;
+    width: 40%;
+    text-align: center;
+    word-break: break-all;
+    
+}
+
+.Item .Item_Span{
+    position: relative;
+    top: 3px;
+
+}

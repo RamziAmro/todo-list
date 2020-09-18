@@ -1,0 +1,32 @@
+.Aside{
+    position: fixed;
+    overflow: visible;
+    background-color: rgb(218, 138, 47);
+
+    width: 20%;
+    height: 100%;
+    
+}
+
+.Aside p{
+    margin-left: 10px;
+    margin-bottom: 100px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* .first_paragraph{
+    background-color: rgb(143, 125, 104);
+    width: 90%;
+
+}
+
+.second_paragraph{
+    background-color: rgb(143, 125, 104);
+    width: 90%;
+}
+
+.third_paragraph{
+    background-color: rgb(143, 125, 104);
+    width: 90%;
+} */
